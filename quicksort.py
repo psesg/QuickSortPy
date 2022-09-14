@@ -47,10 +47,10 @@ def quickSort(array, low, high):
 
 
 inputlist = []
-ncount = int(sys.stdin.readline().strip("\n"))
 big_str = sys.stdin.readline().strip("\n")
 big_strips = big_str.split(' ')
-for i in range(ncount):
+ncount = int(big_strips[0])
+for i in range(1, ncount+1):
     inputlist.append(int(big_strips[i]))
 
 print("Got unsorted Array")
