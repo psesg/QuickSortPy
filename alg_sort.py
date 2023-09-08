@@ -1,7 +1,7 @@
 # Some sort in Python
 
 import datetime
-
+import array as arr
 
 # function to find the partition position
 def partition(array, low, high):
@@ -45,36 +45,36 @@ def quickSort(array, low, high):
     quickSort(array, pi + 1, high)
 
 
-inputlist = []
-inputlist1 = []
 outlist = []
-f = open('1000_small_data.txt', encoding='utf8')
+# Создание массива
+int_arr = arr.array('i')
+int_arr1 = arr.array('i')
+f = open('100000_big_data.txt', encoding='utf8')
 big_str = f.readline().strip("\n")
 f.close()
 # big_str = sys.stdin.readline().strip("\n")
 big_strips = big_str.split(' ')
 ncount = int(big_strips[0])
 for i in range(1, ncount+1):
-    inputlist.append(int(big_strips[i]))
-    inputlist1.append(int(big_strips[i]))
+    int_arr.append(int(big_strips[i]))
+    int_arr1.append(int(big_strips[i]))
 
 print("Got unsorted Array")
 # print(inputlist)
 
-size = len(inputlist)
+size = len(int_arr)
 a = datetime.datetime.now()
-quickSort(inputlist, 0, size - 1)
+quickSort(int_arr, 0, size - 1)
 b = datetime.datetime.now()
 c = b - a
-newsize = len(inputlist)
+newsize = len(int_arr)
 print('QuickSorted int Array length = {} in {}: '.format(newsize, c))
 
-size = len(inputlist1)
+size = len(int_arr1)
 a = datetime.datetime.now()
-# inputlist1.sort()
-outlist = sorted(inputlist1)
+outlist = sorted(int_arr1)
 b = datetime.datetime.now()
 c = b - a
-newsize = len(inputlist1)
+newsize = len(int_arr1)
 print('Sorted internal function Array length = {} in {}: '.format(newsize, c))
-print(outlist)
+# print(outlist)
