@@ -1,8 +1,7 @@
-# Quick sort in Python
+# Some sort in Python
 
-import sys
 import datetime
-import random
+
 
 # function to find the partition position
 def partition(array, low, high):
@@ -49,7 +48,7 @@ def quickSort(array, low, high):
 inputlist = []
 inputlist1 = []
 outlist = []
-f = open('huge_data.txt', encoding='utf8')
+f = open('1000_small_data.txt', encoding='utf8')
 big_str = f.readline().strip("\n")
 f.close()
 # big_str = sys.stdin.readline().strip("\n")
@@ -78,4 +77,4 @@ b = datetime.datetime.now()
 c = b - a
 newsize = len(inputlist1)
 print('Sorted internal function Array length = {} in {}: '.format(newsize, c))
-# print(outlist)
+print(outlist)
