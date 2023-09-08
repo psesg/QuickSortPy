@@ -47,11 +47,17 @@ def quickSort(array, low, high):
 
 
 inputlist = []
-big_str = sys.stdin.readline().strip("\n")
+inputlist1 = []
+outlist = []
+f = open('huge_data.txt', encoding='utf8')
+big_str = f.readline().strip("\n")
+f.close()
+# big_str = sys.stdin.readline().strip("\n")
 big_strips = big_str.split(' ')
 ncount = int(big_strips[0])
 for i in range(1, ncount+1):
     inputlist.append(int(big_strips[i]))
+    inputlist1.append(int(big_strips[i]))
 
 print("Got unsorted Array")
 # print(inputlist)
@@ -62,5 +68,14 @@ quickSort(inputlist, 0, size - 1)
 b = datetime.datetime.now()
 c = b - a
 newsize = len(inputlist)
-print('Sorted int Array length = {} in {}: '.format(newsize, c))
-# print(inputlist)
+print('QuickSorted int Array length = {} in {}: '.format(newsize, c))
+
+size = len(inputlist1)
+a = datetime.datetime.now()
+# inputlist1.sort()
+outlist = sorted(inputlist1)
+b = datetime.datetime.now()
+c = b - a
+newsize = len(inputlist1)
+print('Sorted internal function Array length = {} in {}: '.format(newsize, c))
+# print(outlist)
