@@ -7,10 +7,13 @@ from const import *
 
 from quick_sort import *
 from bubble_sort import *
+from selection_sort import *
+from insertion_sort import *
+from merge_sort import *
 
 list_data_files = ['small_data.txt'
     , 'medium_data.txt'
-    ,'big_data.txt'
+    , 'big_data.txt'
                    # ,'huge_data.txt'
                    ]
 dict_items_count = {'small_data.txt': COUNT_SMALL_DATA
@@ -20,9 +23,29 @@ dict_items_count = {'small_data.txt': COUNT_SMALL_DATA
                     }
 
 
+def alg_inter_sort(array):
+    print('\talg_inter_sort: ', end='')
+    sorted(array)
+
+
 def alg_quick_sort(array):
     print('\talg_sort_quick: ', end='')
     quick_sort(array, 0, len(array) - 1)
+
+
+def alg_merge_sort(array):
+    print('\talg_merge_sort: ', end='')
+    merge_sort(array)
+
+
+def alg_selection_sort(array):
+    print('\talg_selection_sort: ', end='')
+    selection_sort(array)
+
+
+def alg_insertion_sort(array):
+    print('\talg_insertion_sort: ', end='')
+    insertion_sort(array)
 
 
 def alg_bubble_sort(array):
@@ -30,12 +53,8 @@ def alg_bubble_sort(array):
     bubble_sort(array)
 
 
-def alg_inter_sort(array):
-    print('\talg_inter_sort: ', end='')
-    sorted(array)
-
-
-func_list = [alg_inter_sort, alg_quick_sort, alg_bubble_sort]
+func_list = [alg_inter_sort, alg_quick_sort, alg_selection_sort,
+             alg_insertion_sort, alg_bubble_sort]
 
 
 # decorator to calculate duration
