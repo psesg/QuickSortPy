@@ -8,30 +8,35 @@ from const import *
 from quick_sort import *
 from bubble_sort import *
 
-
-
 list_data_files = ['small_data.txt'
-                    ,'medium_data.txt'
-                   # ,'big_data.txt'
+    , 'medium_data.txt'
+    ,'big_data.txt'
                    # ,'huge_data.txt'
                    ]
 dict_items_count = {'small_data.txt': COUNT_SMALL_DATA
-                    ,'medium_data.txt': COUNT_MEDIUM_DATA
-                    ,'big_data.txt': COUNT_BIG_DATA
-                    ,'huge_data.txt': COUNT_HUGE_DATA
-                   }
+    , 'medium_data.txt': COUNT_MEDIUM_DATA
+    , 'big_data.txt': COUNT_BIG_DATA
+    , 'huge_data.txt': COUNT_HUGE_DATA
+                    }
+
+
 def alg_quick_sort(array):
     print('\talg_sort_quick: ', end='')
     quick_sort(array, 0, len(array) - 1)
 
+
 def alg_bubble_sort(array):
     print('\talg_bubble_sort: ', end='')
     bubble_sort(array)
+
+
 def alg_inter_sort(array):
     print('\talg_inter_sort: ', end='')
     sorted(array)
 
-func_list = [alg_bubble_sort, alg_quick_sort, alg_inter_sort]
+
+func_list = [alg_inter_sort, alg_quick_sort, alg_bubble_sort]
+
 
 # decorator to calculate duration
 # taken by any function.
@@ -69,4 +74,3 @@ for data_file in list_data_files:
         for i in range(1, ncount + 1):
             int_arr.append(int(big_strips[i]))
         run_alg(int_arr, f)
-
