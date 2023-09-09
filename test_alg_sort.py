@@ -53,7 +53,7 @@ def alg_bubble_sort(array):
     bubble_sort(array)
 
 
-func_list = [alg_inter_sort, alg_quick_sort, alg_selection_sort,
+func_list = [alg_inter_sort, alg_quick_sort, alg_merge_sort, alg_selection_sort,
              alg_insertion_sort, alg_bubble_sort]
 
 

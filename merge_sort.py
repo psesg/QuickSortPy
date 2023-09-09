@@ -1,31 +1,29 @@
-def merge_sort(arr):
-    # Последнее разделение массива
-    if len(arr) <= 1:
-        return arr
-    mid = len(arr) // 2
-    # Выполняем merge_sort рекурсивно с двух сторон
-    left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
+import operator
 
-    # Объединяем стороны вместе
-    return merge(left, right, arr.copy())
-
-
-def merge(left, right, merged):
-    left_cursor, right_cursor = 0, 0
-    while left_cursor < len(left) and right_cursor < len(right):
-
-        # Сортируем каждый и помещаем в результат
-        if left[left_cursor] <= right[right_cursor]:
-            merged[left_cursor + right_cursor] = left[left_cursor]
-            left_cursor += 1
+def merge(left, right, compare):
+    result = []
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if compare(left[i], right[j]):
+            result.append(left[i])
+            i += 1
         else:
-            merged[left_cursor + right_cursor] = right[right_cursor]
-            right_cursor += 1
+            result.append(right[j])
+            j += 1
+    while i < len(left):
+        result.append(left[i])
+        i += 1
+    while j < len(right):
+        result.append(right[j])
+        j += 1
+    return result
 
-    for left_cursor in range(left_cursor, len(left)):
-        merged[left_cursor + right_cursor] = left[left_cursor]
 
-    for right_cursor in range(right_cursor, len(right)):
-        merged[left_cursor + right_cursor] = right[right_cursor]
-
-    return merged
+def merge_sort(L, compare=operator.lt):
+    if len(L) < 2:
+        return L[:]
+    else:
+        middle = int(len(L) / 2)
+        left = merge_sort(L[:middle], compare)
+        right = merge_sort(L[middle:], compare)
+        return merge(left, right, compare)
