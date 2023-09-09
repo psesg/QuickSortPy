@@ -1,15 +1,11 @@
 import datetime
 import random
+from const import *
 
-COUNT_SMALL_DATA = 1000
-COUNT_MEDIUM_DATA = 10000
-COUNT_BIG_DATA = 100000
-COUNT_HUGE_DATA = 1000000
-
-dict_data_files = {COUNT_SMALL_DATA:'small_data.txt'
-                    ,COUNT_MEDIUM_DATA:'medium_data.txt'
-                    ,COUNT_BIG_DATA:'big_data.txt'
-                    ,COUNT_HUGE_DATA:'huge_data.txt'
+dict_data_files = {COUNT_SMALL_DATA: 'small_data.txt'
+                    ,COUNT_MEDIUM_DATA: 'medium_data.txt'
+                    ,COUNT_BIG_DATA: 'big_data.txt'
+                    ,COUNT_HUGE_DATA: 'huge_data.txt'
                    }
 def gendata(max_size: int, filename: str) -> []:
     genset = set()
@@ -27,8 +23,8 @@ def gendata(max_size: int, filename: str) -> []:
 
 for key, value in dict_data_files.items():
     a = datetime.datetime.now()
-    print(f'{key} items generated in file {str(key) + "_" + value}', end='')
-    gendata(key, str(key) + '_' + value)
+    print(f'{key} items generated in file {value}', end='')
+    gendata(key, value)
     b = datetime.datetime.now()
     c = b - a
     print(f' during {c}')
