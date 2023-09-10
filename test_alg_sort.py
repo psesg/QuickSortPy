@@ -38,13 +38,13 @@ def alg_merge_sort(array):
     merge_sort(array)
 
 
-def alg_selection_sort(array):
-    print('\talg_selection_sort: ', end='')
+def alg_select_sort(array):
+    print('\talg_select_sort: ', end='')
     selection_sort(array)
 
 
-def alg_insertion_sort(array):
-    print('\talg_insertion_sort: ', end='')
+def alg_insert_sort(array):
+    print('\talg_insert_sort: ', end='')
     insertion_sort(array)
 
 
@@ -53,8 +53,8 @@ def alg_bubble_sort(array):
     bubble_sort(array)
 
 
-func_list = [alg_inter_sort, alg_quick_sort, alg_merge_sort, alg_selection_sort,
-             alg_insertion_sort, alg_bubble_sort]
+func_list = [alg_inter_sort, alg_quick_sort, alg_merge_sort, alg_select_sort,
+             alg_insert_sort, alg_bubble_sort]
 
 
 # decorator to calculate duration
