@@ -3,6 +3,7 @@
 # importing libraries
 import time
 import array as arr
+from numpy import *
 from const import *
 
 from quick_sort import *
@@ -13,7 +14,7 @@ from merge_sort import *
 
 list_data_files = ['small_data.txt'
     , 'medium_data.txt'
-    , 'big_data.txt'
+    # , 'big_data.txt'
                    # ,'huge_data.txt'
                    ]
 dict_items_count = {'small_data.txt': COUNT_SMALL_DATA
