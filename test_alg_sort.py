@@ -3,7 +3,7 @@
 # importing libraries
 
 import array as arr
-from numpy import *
+# from numpy import *
 from const import *
 
 from util import *
