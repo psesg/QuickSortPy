@@ -1,11 +1,12 @@
 # Some sort alg in Python
 
 # importing libraries
-import time
+
 import array as arr
 from numpy import *
 from const import *
 
+from util import *
 from quick_sort import *
 from bubble_sort import *
 from selection_sort import *
@@ -57,22 +58,6 @@ def alg_bubble_sort(array):
 func_list = [alg_inter_sort, alg_quick_sort, alg_merge_sort, alg_select_sort,
              alg_insert_sort, alg_bubble_sort]
 
-
-# decorator to calculate duration
-# taken by any function.
-def calculate_time(func):
-    # added arguments inside the inner1,
-    # if function takes any arguments,
-    # can be added like this.
-    def inner1(*args, **kwargs):
-        # storing time before function execution
-        begin = time.time()
-        func(*args, **kwargs)
-        # storing time after function execution
-        end = time.time()
-        print("\ttaken time: ", end - begin)
-
-    return inner1
 
 
 @calculate_time

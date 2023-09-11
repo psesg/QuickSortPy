@@ -1,0 +1,10 @@
+ToDo:
+not - slowly up to 5 tomes: 1. In gen_test_data not need use genset = set() - enouthf genlist.
+yes - 2. Info about time gen need take from test module or decorator transfer to util.py
+3. Make in all sort function return N list first items as list, if N == 0 return empty list (or print from sort function).
+4. In caller decorator - make prin if list not empty.
+not - slowly up to 2 tomes: 5. Make arrays as: from numpy import * 
+6. Read one set from file once - then send to sort just copy of array.
+	https://stackoverflow.com/questions/37593013/deep-copy-of-a-np-array-of-np-array
+	https://www.geeksforgeeks.org/array-copying-in-python/
+
