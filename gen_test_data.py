@@ -2,10 +2,10 @@ import datetime
 import random
 from const import *
 
-dict_data_files = {COUNT_SMALL_DATA: 'small_data.txt'
-                    ,COUNT_MEDIUM_DATA: 'medium_data.txt'
-                    ,COUNT_BIG_DATA: 'big_data.txt'
-                    ,COUNT_HUGE_DATA: 'huge_data.txt'
+dict_data_files = {DATA_1000: str(DATA_1000) + '.txt'
+                    ,DATA_10000: str(DATA_10000) + '.txt'
+                    ,DATA_15000: str(DATA_15000) + '.txt'
+                    ,DATA_50000: str(DATA_50000) + '.txt'
                    }
 def gendata(max_size: int, filename: str) -> []:
     genset = set()

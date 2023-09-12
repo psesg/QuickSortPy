@@ -37,4 +37,11 @@ def quick_sort(array, low, high):
 
         # recursive call on the right of pivot
         quick_sort(array, pi + 1, high)
-    # return array[:BEGIN_SORT]
+
+    return array
+
+def quick_sort_wrap(array, low, high, num_sorted_items_print):
+    sorted_array = quick_sort(array, low, high)
+    if num_sorted_items_print > 0:
+        print(f'\t{list(sorted_array[:num_sorted_items_print])}', end='')
+    return sorted_array

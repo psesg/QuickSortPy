@@ -1,4 +1,4 @@
-def selection_sort(arr):
+def selection_sort(arr, num_sorted_items_print):
     for i in range(len(arr)):
         minimum = i
 
@@ -9,5 +9,6 @@ def selection_sort(arr):
 
         # Помещаем это перед отсортированным концом массива
         arr[minimum], arr[i] = arr[i], arr[minimum]
-
+    if num_sorted_items_print > 0:
+        print(f'\t{list(arr[:num_sorted_items_print])}', end='')
     return arr

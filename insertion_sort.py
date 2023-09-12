@@ -1,4 +1,7 @@
-def insertion_sort(arr):
+from const import *
+
+
+def insertion_sort(arr, num_sorted_items_print):
     for i in range(len(arr)):
         cursor = arr[i]
         pos = i
@@ -9,5 +12,6 @@ def insertion_sort(arr):
             pos = pos - 1
         # Остановимся и сделаем последний обмен
         arr[pos] = cursor
-
+    if num_sorted_items_print > 0:
+        print(f'\t{list(arr[:num_sorted_items_print])}', end='')
     return arr

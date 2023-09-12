@@ -1,4 +1,7 @@
-def bubble_sort(arr):
+from const import *
+
+
+def bubble_sort(arr, num_sorted_items_print=0):
     n = len(arr)
     # optimize code, so if the array is already sorted, it doesn't need
     # to go through the entire process
@@ -20,4 +23,7 @@ def bubble_sort(arr):
         if not swapped:
             # if we haven't needed to make a single swap, we
             # can just exit the main loop.
-            return
+            break
+    if num_sorted_items_print > 0:
+        print(f'\t{list(arr[:num_sorted_items_print])}', end='')
+    return arr

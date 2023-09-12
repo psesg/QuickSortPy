@@ -1,5 +1,6 @@
 import operator
 
+
 def merge(left, right, compare):
     result = []
     i, j = 0, 0
@@ -19,11 +20,18 @@ def merge(left, right, compare):
     return result
 
 
-def merge_sort(L, compare=operator.lt):
-    if len(L) < 2:
-        return L[:]
+def merge_sort(arr, compare):
+    if len(arr) < 2:
+        result = arr[:]
     else:
-        middle = int(len(L) / 2)
-        left = merge_sort(L[:middle], compare)
-        right = merge_sort(L[middle:], compare)
-        return merge(left, right, compare)
+        middle = int(len(arr) / 2)
+        left = merge_sort(arr[:middle], compare)
+        right = merge_sort(arr[middle:], compare)
+        result = merge(left, right, compare)
+    return result
+
+def merge_sort_wrap(arr, num_sorted_items_print, compare=operator.lt):
+    arr_sorted = merge_sort(arr, compare=operator.lt)
+    if num_sorted_items_print > 0:
+        print(f'\t{list(arr_sorted[:num_sorted_items_print])}', end='')
+    return arr_sorted
