@@ -8,11 +8,11 @@ import copy
 from const import *
 
 from util import *
-from quick_sort import *
-from bubble_sort import *
-from selection_sort import *
-from insertion_sort import *
-from merge_sort import *
+from alg_quick_sort import *
+from alg_bubble_sort import *
+from alg_selection_sort import *
+from alg_insertion_sort import *
+from alg_merge_sort import *
 
 # TODO: enhance
 #   NOT! Slowly up to 5 tomes! In gen_test_data not need use set,  just list.
