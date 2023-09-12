@@ -2,11 +2,11 @@ import datetime
 import random
 from const import *
 
-dict_data_files = {DATA_1000: str(DATA_1000) + '.txt'
-                    ,DATA_10000: str(DATA_10000) + '.txt'
-                    ,DATA_15000: str(DATA_15000) + '.txt'
-                    ,DATA_50000: str(DATA_50000) + '.txt'
-                   }
+dict_data_files = {}
+for d_file in data_file_list:
+    dict_data_files.update({d_file: str(d_file) + '.txt'})
+
+
 def gendata(max_size: int, filename: str) -> []:
     genset = set()
     genlist = []

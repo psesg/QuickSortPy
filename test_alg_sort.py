@@ -26,19 +26,9 @@ from alg_radix_sort import *
 #   https://stackoverflow.com/questions/37593013/deep-copy-of-a-np-array-of-np-array
 # 	https://www.geeksforgeeks.org/array-copying-in-python/
 
-list_data_files = [
-      str(DATA_1000) + '.txt'
-    , str(DATA_10000) + '.txt'
-    , str(DATA_15000) + '.txt'
-    # ,str(DATA_50000) + '.txt'
-                   ]
-dict_items_count = {
-      str(DATA_1000) + '.txt': DATA_1000
-    , str(DATA_10000) + '.txt': DATA_10000
-    , str(DATA_15000) + '.txt': DATA_15000
-    , str(DATA_50000) + '.txt': DATA_50000
-                    }
-
+dict_data_files = {}
+for d_file in data_file_list:
+    dict_data_files.update({d_file: str(d_file) + '.txt'})
 
 def alg_inter_sort(array, num_sorted_items_print=0):
     print('\talg_inter_sort: ', end='')
@@ -93,16 +83,14 @@ func_list = [alg_inter_sort, alg_count_sort, alg_radix_sort,
              ]
 
 
-
 @calculate_time
 def run_alg(array, f):
     f(array, SORTED_DATA_SAMPLE)
 
-
-for data_file in list_data_files:
-    print(f'got {dict_items_count[data_file]} unsorted items form {data_file}')
+for k, v in dict_data_files.items():
+    print(f'got {k} unsorted items form {v}')
     int_arr_org = arr.array('i')
-    fl = open(data_file, encoding='utf8')
+    fl = open(v, encoding='utf8')
     big_str = fl.readline().strip("\n")
     fl.close()
     # big_str = sys.stdin.readline().strip("\n")
