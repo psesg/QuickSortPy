@@ -13,6 +13,9 @@ from alg_bubble_sort import *
 from alg_selection_sort import *
 from alg_insertion_sort import *
 from alg_merge_sort import *
+from alg_heap_pyr_sort import *
+from alg_counting_sort import *
+from alg_radix_sort import *
 
 # TODO: enhance
 #   NOT! Slowly up to 5 tomes! In gen_test_data not need use set,  just list.
@@ -26,7 +29,7 @@ from alg_merge_sort import *
 list_data_files = [
     str(DATA_1000) + '.txt'
     , str(DATA_10000) + '.txt'
-    # , str(DATA_15000) + '.txt'
+    , str(DATA_15000) + '.txt'
     # ,str(DATA_50000) + '.txt'
                    ]
 dict_items_count = {str(DATA_1000) + '.txt': DATA_1000
@@ -67,9 +70,26 @@ def alg_bubble_sort(array, num_sorted_items_print=0):
     print('\talg_bubble_sort: ', end='')
     bubble_sort(array, num_sorted_items_print)
 
+def alg_heap_pyr_sort(array, num_sorted_items_print=0):
+    print('\talg_heap_pyr_sort: ', end='')
+    heapsort(array, num_sorted_items_print)
+
+
+def alg_count_sort(array, num_sorted_items_print=0):
+    print('\talg_count_sort: ', end='')
+    count_sort(array, num_sorted_items_print)
+
+
+def alg_radix_sort(array, num_sorted_items_print=0):
+    print('\talg_radix_sort: ', end='')
+    radix_sort(array, num_sorted_items_print)
+
+
 #
-func_list = [alg_inter_sort, alg_quick_sort, alg_merge_sort, alg_select_sort,
-             alg_insert_sort, alg_bubble_sort]
+func_list = [alg_inter_sort, alg_count_sort, alg_radix_sort,
+             alg_quick_sort, alg_merge_sort, alg_heap_pyr_sort,
+             alg_select_sort, alg_insert_sort, alg_bubble_sort,
+             ]
 
 
 

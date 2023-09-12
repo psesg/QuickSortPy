@@ -1,7 +1,7 @@
 from const import *
 
 
-def bubble_sort(arr, num_sorted_items_print=0):
+def bubble_sort(arr, num_sorted_items_print):
     n = len(arr)
     # optimize code, so if the array is already sorted, it doesn't need
     # to go through the entire process
