@@ -78,8 +78,8 @@ def alg_radix_sort(array, num_sorted_items_print=0):
 
 #
 func_list = [alg_inter_sort, alg_count_sort, alg_radix_sort,
-             alg_quick_sort, alg_merge_sort, alg_heap_pyr_sort,
-             alg_select_sort, alg_insert_sort, alg_bubble_sort,
+             alg_quick_sort, alg_merge_sort, alg_heap_pyr_sort
+             ,alg_select_sort, alg_insert_sort, alg_bubble_sort,
              ]
 
 
