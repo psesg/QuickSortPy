@@ -27,12 +27,13 @@ from alg_radix_sort import *
 # 	https://www.geeksforgeeks.org/array-copying-in-python/
 
 list_data_files = [
-    str(DATA_1000) + '.txt'
+      str(DATA_1000) + '.txt'
     , str(DATA_10000) + '.txt'
     , str(DATA_15000) + '.txt'
     # ,str(DATA_50000) + '.txt'
                    ]
-dict_items_count = {str(DATA_1000) + '.txt': DATA_1000
+dict_items_count = {
+      str(DATA_1000) + '.txt': DATA_1000
     , str(DATA_10000) + '.txt': DATA_10000
     , str(DATA_15000) + '.txt': DATA_15000
     , str(DATA_50000) + '.txt': DATA_50000
